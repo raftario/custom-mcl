@@ -11,9 +11,9 @@ import Packs from './views/Packs'
 import Settings from './views/Settings.js'
 
 const viewContainers = {
-  Home: <Home/>,
-  Settings: <Settings/>,
-  Packs: <Packs/>
+  Home: <Home />,
+  Settings: <Settings />,
+  Packs: <Packs />
 }
 
 export default class App extends React.Component {
