@@ -33,7 +33,7 @@ export default class Home extends React.Component {
   render () {
     return (
       <>
-        <Container className='my-5 py-3'>
+        <Container className='my-5 py-5'>
           <Markdown
             options={{
               overrides: {

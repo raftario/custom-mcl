@@ -11,8 +11,8 @@ let mainWindow
 
 function createMainWindow () {
   const window = new BrowserWindow({
-    minWidth: 400,
-    minHeight: 400,
+    minWidth: 500,
+    minHeight: 500,
     webPreferences: { nodeIntegration: true }
   })
 
