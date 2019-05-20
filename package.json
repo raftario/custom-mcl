@@ -1,7 +1,8 @@
 {
   "license": "MIT",
   "scripts": {
-    "lint": "standard --fix"
+    "lint": "standard --fix",
+    "postinstall": "cd launcher && yarn"
   },
   "husky": {
     "hooks": {
