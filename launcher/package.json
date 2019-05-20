@@ -1,0 +1,61 @@
+{
+  "name": "custom-mcl",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Raphaël Thériault <raphael_theriault@outlook.com> (raphaeltheriault.com)",
+  "description": "A custom Minecraft launcher",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
+    "lint": "standard --fix"
+  },
+  "build": {
+    "appId": "com.raphaeltheriault.custommcl",
+    "productName": "Custom Minecraft Launcher",
+    "copyright": "Copyright © 2019 Raphaël Thériault",
+    "mac": {
+      "category": "public.app-category.games"
+    }
+  },
+  "electronWebpack": {
+    "title": "Custom Minecraft Launcher"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "markdown-to-jsx": "^6.9.4",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "source-map-support": "^0.5.10"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "electron": "4.0.1",
+    "electron-builder": "20.38.4",
+    "electron-webpack": "^2.6.2",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "standard": "^12.0.1",
+    "webpack": "4.28.4"
+  }
+}
